@@ -39,6 +39,7 @@
 		d.shieldsUp && cmd.push('--shields-up');
 		d.generateQR && cmd.push('--qr');
 		d.reset && cmd.push('--reset');
+		d.netfilterMode && cmd.push('--netfilter-mode=off');
 		d.operator && d.operatorValue != '' && cmd.push('--operator=' + d.operatorValue);
 		d.forceReauth && cmd.push('--force-reauth');
 		d.sshServer && cmd.push('--ssh');
@@ -125,6 +126,11 @@
 			bind:checked={deployment.sshServer}
 			name="SSH Server"
 			help="Run a local SSH server accessible by administrators"
+		/>
+		<DeployCheck
+			bind:checked={deployment.netfilterMode}
+			name="Netfilter Mode"
+			help="(Unix Only) Turn off automatic firewall configuration"
 		/>
 		<DeployCheck
 			bind:checked={deployment.usePreAuthKey}

@@ -227,6 +227,7 @@ export type Deployment = {
 	usePreAuthKey: boolean;
 	preAuthKeyUser: string;
 	preAuthKey: string;
+	netfilterMode: boolean;
 	// advertise
 	advertiseExitNode: boolean;
 	advertiseExitNodeLocalAccess: boolean;

@@ -48,6 +48,7 @@ export const DeploymentDefaultStore: Writable<Deployment> = localStorageStore('d
 	usePreAuthKey: false,
 	preAuthKeyUser: '',
 	preAuthKey: '',
+	netfilterMode: false,
 	// advertise
 	advertiseExitNode: false,
 	advertiseExitNodeLocalAccess: false,

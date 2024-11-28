@@ -30,8 +30,8 @@ export async function createUser(username: string): Promise<User> {
 }
 
 export async function createNode(key: string, username: string): Promise<Node> {
-	if (!key.startsWith('nodekey:')) {
-		key = 'nodekey:' + key;
+	if (!key.startsWith('mkey:')) {
+		key = 'mkey:' + key;
 	}
 	const data = '?user=' + username + '&key=' + key;
 	const device = getApiDeviceNode(
